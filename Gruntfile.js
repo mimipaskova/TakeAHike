@@ -175,7 +175,7 @@ module.exports = function (grunt) {
       development: {
         options: {
         },
-        src: 'style/**/*.less',
+        src: 'application/style/**/*.less',
         dest: 'development/style.css'
       }
     },
@@ -363,7 +363,7 @@ module.exports = function (grunt) {
         tasks: 'less'
       },
       devless: {
-        files: 'style/**/*.less',
+        files: 'application/style/**/*.less',
         tasks: 'less:development'
       }
     },
