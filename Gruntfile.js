@@ -8,6 +8,9 @@
 module.exports = function (grunt) {
   'use strict';
 
+  grunt.loadNpmTasks('grunt-nodemon');
+  grunt.loadNpmTasks('grunt-concurrent');
+
   // Force use of Unix newlines
   grunt.util.linefeed = '\n';
 
@@ -50,6 +53,21 @@ module.exports = function (grunt) {
     jqueryVersionCheck: configBridge.config.jqueryVersionCheck.join('\n'),
 
     // Task configuration.
+    concurrent: {
+        target: {
+            tasks: ['nodemon', 'watch:devless'],
+            options: {
+                logConcurrentOutput: true
+            }
+        }
+    },
+
+    nodemon: {
+      dev: {
+        script: 'application/server.js'
+      }
+    },
+
     clean: {
       dist: 'dist',
       docs: 'docs/dist'
@@ -176,7 +194,7 @@ module.exports = function (grunt) {
         options: {
         },
         src: 'application/style/**/*.less',
-        dest: 'development/style.css'
+        dest: 'application/dist/style.css'
       }
     },
 
@@ -470,6 +488,8 @@ module.exports = function (grunt) {
   // Full distribution task.
   grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js', 'less:development']);
   grunt.registerTask('distDev', ['less:development']);
+
+  grunt.registerTask('serve', ['concurrent:target']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'test']);

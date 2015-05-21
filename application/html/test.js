@@ -1,0 +1,1 @@
+var html = new EJS({url: 'test.ejs'}).render({supplies: [1, 2, 3, 5, 100, 1234]});
