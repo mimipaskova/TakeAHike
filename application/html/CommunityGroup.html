@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="../../dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../../dist/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="../style/flexigrid.css">
+      <link rel="stylesheet" href="../style/communityGroup.less">
+      <link rel="stylesheet" href="../style/jquery-ui-1.11.4.css">
+      <script src="https://maps.googleapis.com/maps/api/js"></script>
+   </head>
+   <body>
+      <div class="container" style="margin-top:30px">
+
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <h3 class="panel-title"><strong>Предстоящи пътувания</strong></h3>
+         </div>
+         <div class="panel-body text-center pagination-centered" id="body">
+            <fieldset>
+               <div class="th-centered">
+               <input class="btn btn-sm btn-default " type="button" id='add-suggestion' value="Добавяне на ново предложение+"/><input class="btn btn-sm btn-default " type="button" id='remove-user' value="Премахни"/>
+            </div>
+               <div class='centered'>
+                  <span>Търси по ключова дума</span><input type="text" id="search-dest" class='form-control th-centered'>
+                  <div>
+                     <div class='th-centered text-center pagination-centered'>
+                        <span class="th-vertical-center">Търси по местоположение</span>
+                        <div class='th-centered' id="map-canvas"></div>
+                     </div>
+                     <div id="destFormBox">
+                        <h3>Предложения:  </h3>
+                        <div id="flexiDestinationList">
+                           <table id="DestinationList" >
+                              <tr>
+                                 <td>
+                                    <div id='number'>1</div>
+                                 </td>
+                                 <td>
+                                    <div id='name'>Иван Иванов</div>
+                                 </td>
+                                 <td>
+                                    <div id='place'>Ягодинска пещера</div>
+                                 </td>
+                                 <td>
+                                    <div id='description'>Изумително място</div>
+                                 </td>
+                                 <td>
+                                    <div id='date'>12.07.2015</div>
+                                 </td>
+                                 <td>
+                                    <div id='freePlaces'>4</div>
+                                 </td>
+                                 <td>
+                                    <div ><input class="btn btn-sm btn-default th-subscribe" type="button"  value="Запиши ме"/></div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <div id='number'>2</div>
+                                 </td>
+                                 <td>
+                                    <div id='name'>Йорданка Милчева</div>
+                                 </td>
+                                 <td>
+                                    <div id='place'>Хисаря</div>
+                                 </td>
+                                 <td>
+                                    <div id='description'>Минерални бани</div>
+                                 </td>
+                                 <td>
+                                    <div id='date'>06.06.2015</div>
+                                 </td>
+                                 <td>
+                                    <div id='freePlaces'>5</div>
+                                 </td>
+                                 <td>
+                                    <div ><input class="btn btn-sm btn-default th-subscribe" type="button"  value="Запиши ме"/></div>
+                                 </td>
+                              </tr>
+                           </table>
+                        </div>
+                     </div>
+            </fieldset>
+            </div>
+            </div>
+      
+      </div>
+      <div id="create-confirmation">
+      </div>
+      <script src="../libs/jquery-2.1.4.min.js"></script>
+      <script src="../libs/jquery-ui-1.11.4.js"></script>
+      <script src="../libs/flexigrid.js"></script>
+      <script src="../javascript/communityGroup.js"></script>
+      <script>
+         $(document).ready(function(){
+         communityGroup();
+         communityGroup.initialize();
+         
+         function initialize() {
+         var mapCanvas = document.getElementById('map-canvas');
+         var mapOptions = {
+          center: new google.maps.LatLng(42.41396, 25.00622),
+          zoom: 7,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+         }
+         var map = new google.maps.Map(mapCanvas, mapOptions)
+         }
+         google.maps.event.addDomListener(window, 'load', initialize);
+         });
+      </script>
+   </body>
+</html>
