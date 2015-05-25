@@ -41,4 +41,8 @@ $(document).ready(function () {
             }
         })(i));
     }
+    
+    if (needsToLoad == 0) {
+        $("body").fadeIn();
+    }
 });
