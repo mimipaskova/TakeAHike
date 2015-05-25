@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-12 lead">
+                  Edit user profile
+                  <hr>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 text-center">
+                  <div id="img-preview-block" class="img-circle avatar avatar-original center-block" style="background-size:cover;
+                  background-image:url(http://robohash.org/sitsequiquia.png?size=120x120)"></div>
+                  <br>
+                  <span class="btn btn-link btn-file">Избери снимка<input type="file" id="upload-img"></span>
+                </div>
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label for="user_last_name">Потребителско име</label>
+                    <input type="text" class="form-control" id="user_last_name">
+                  </div>
+                  <div class="form-group">
+                    <label for="user_first_name">Email</label>
+                    <input type="text" class="form-control" id="user_first_name">
+                  </div>
+                  <div class="form-group">
+                    <label for="user_middle_name">Име</label>
+                    <input type="text" class="form-control" id="user_middle_name">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <hr>
+                  <button id="save-profile-admin" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-floppy-disk"></i> Запази</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="edit-profile.js"></script>
+    <script src="core.js"></script>
+  </body>
+</html>
