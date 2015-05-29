@@ -16,14 +16,22 @@ $(function() {
     });
 });
 
-$(document).ready(function () {
-    $("#save-profile").on("click", function() {
-        window.location.href = "edited-profile.html";
-    });
-});
 
-$(document).ready(function () {
-    $("#save-profile-admin").on("click", function() {
-        window.location.href = "profile-admin.html";
-    });
-});
+var gotoEditedProfile = function () {
+    if (isAdmin) {
+        loadInContainer("root-container", "edited-profile-admin.html");
+    } else {
+        loadInContainer("root-container", "edited-profile.html");
+    }
+    activeHeaderTab("profileTab");
+}
+
+var saveProfile = function () {
+    BootstrapDialog.success("Профилат беше редактиран успешно");
+    gotoEditedProfile();
+}
+
+var saveProfileAdmin = function () {
+    BootstrapDialog.success("Профилат беше редактиран успешно");
+    gotoEditedProfile();
+}

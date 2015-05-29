@@ -171,3 +171,19 @@ communityGroup.createFlexigrid = function() {
         
 	};
 };
+
+var initializeCommunityGroup = function () {
+    communityGroup();
+    communityGroup.initialize();
+ 
+    function initialize() {
+    var mapCanvas = document.getElementById('map-canvas');
+    var mapOptions = {
+     center: new google.maps.LatLng(42.41396, 25.00622),
+     zoom: 7,
+     mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions)
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+}

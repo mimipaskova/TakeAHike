@@ -1,124 +1,109 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="container" style="margin-top:30px">
-            <div class="col-md-8">
-                <div class="panel panel-default">
-                    <div class="panel-heading"><h3 class="panel-title"><strong>Регистрационна форма</strong></h3></div>
-                    <div class="panel-body" id="body">
-                        <div>
-                            <div class="form-group">
-                                <label for="nameOrEmail" class="th-lables">Потребителско име</label>
-                                <input type="text" class="form-control th-input-credentials" id="nameOrEmail" placeholder="Потребителско име">
-                            </div>
-                            <div class="form-group">
-                                <label for="nameOrEmail" class="th-lables">Email</label>
-                                <input type="email" class="form-control th-input-credentials" id="nameOrEmail" placeholder="Въведи email">
-                            </div>
-                            <div class="form-group">
-                                <label for="nameOrEmail" class="th-lables">Парола</label>
-                                <input type="password" class="form-control th-input-credentials" id="nameOrEmail" placeholder="Въведи парола">
-                            </div>
-                            <div class="form-group">
-                                <label for="nameOrEmail" class="th-lables">Повторете парола</label>
-                                <input type="password" class="form-control th-input-credentials" id="nameOrEmail" placeholder="Въведи парола">
-                            </div>
-                            <div class="form-group">
-                                <label for="nameOrEmail" class="th-lables">Вашите имена</label>
-                                <input type="text" class="form-control th-input-credentials" id="nameOrEmail" placeholder="Въведи имена">
-                            </div>
-                            <div class="form-group">
-                                <label for="nameOrEmail" class="th-lables">Пол</label>
-                                <select class="form-control th-input-credentials" id="nameOrEmail">
-                                    <option>Мъж</option>
-                                    <option>Жена</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="th-lables">Рожденна дата</label>
-                                <label for="password" class="th-lables-date">Дата</label>
-                                <select class="form-control th-input-credentials-date" id="nameOrEmail">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                    <option value="13">13</option>
-                                    <option value="14">14</option>
-                                    <option value="15">15</option>
-                                    <option value="16">16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="21">21</option>
-                                    <option value="22">22</option>
-                                    <option value="23">23</option>
-                                    <option value="24">24</option>
-                                    <option value="25">25</option>
-                                    <option value="26">26</option>
-                                    <option value="27">27</option>
-                                    <option value="28">28</option>
-                                    <option value="29">29</option>
-                                    <option value="30">30</option>
-                                    <option value="31">31</option>
-                                </select>
-                                <label for="password" class="th-lables-date">Месец</label>
-                                <select class="form-control th-input-credentials-date" id="nameOrEmail">
-                                    <option value="Януари">Януари</option>
-                                    <option value="Февруари">Февруари</option>
-                                    <option value="Март">Март</option>
-                                    <option value="Април">Април</option>
-                                    <option value="Май">Май</option>
-                                    <option value="Юни">Юни</option>
-                                    <option value="Юли">Юли</option>
-                                    <option value="Август">Август</option>
-                                    <option value="Септември">Септември</option>
-                                    <option value="Октомври">Октомври</option>
-                                    <option value="Ноември">Ноември</option>
-                                    <option value="Декември">Декември</option>
-                                </select>
-                                <label for="password" class="th-lables-date">Година</label>
-                                <select class="form-control th-input-credentials-date" id="nameOrEmail">
-                                    <option value="2002">1994</option>
-                                    <option value="2003">1995</option>
-                                    <option value="2004">1996</option>
-                                    <option value="2005">1997</option>
-                                    <option value="2002">1998</option>
-                                    <option value="2003">1999</option>
-                                    <option value="2004">2000</option>
-                                    <option value="2005">2001</option>
-                                    <option value="2002">2002</option>
-                                    <option value="2003">2003</option>
-                                    <option value="2004">2004</option>
-                                    <option value="2005">2005</option>
-                                </select>
-                                
-                            </div>
-                            <label id="rules">
-                                <input type="checkbox" name="rules" value="Rules">Съгласен съм с 
-                                <a href="">Правила за използване</a>
-                            </label>
-                            <button type="button" class="btn btn-sm btn-default th-button" id="register">Регистрирай ме</button>
-                        </div>
+<div class="container" style="margin-top:30px">
+        <div class="register-panel panel panel-default">
+            <div class="panel-heading"><h3 class="panel-title"><strong>Регистрационна форма</strong></h3></div>
+            <div class="panel-body" id="body">
+                <div>
+                    <div class="form-group">
+                        <label for="nameOrEmail" class="th-lables">Потребителско име</label>
+                        <input type="text" class="form-control th-input-credentials" id="nameOrEmail" placeholder="Потребителско име">
                     </div>
+                    <div class="form-group">
+                        <label for="nameOrEmail" class="th-lables">Email</label>
+                        <input type="email" class="form-control th-input-credentials" id="nameOrEmail" placeholder="Въведи email">
+                    </div>
+                    <div class="form-group">
+                        <label for="nameOrEmail" class="th-lables">Парола</label>
+                        <input type="password" class="form-control th-input-credentials" id="nameOrEmail" placeholder="Въведи парола">
+                    </div>
+                    <div class="form-group">
+                        <label for="nameOrEmail" class="th-lables">Повторете парола</label>
+                        <input type="password" class="form-control th-input-credentials" id="nameOrEmail" placeholder="Въведи парола">
+                    </div>
+                    <div class="form-group">
+                        <label for="nameOrEmail" class="th-lables">Вашите имена</label>
+                        <input type="text" class="form-control th-input-credentials" id="nameOrEmail" placeholder="Въведи имена">
+                    </div>
+                    <div class="form-group">
+                        <label for="nameOrEmail" class="th-lables">Пол</label>
+                        <select class="form-control th-input-credentials" id="nameOrEmail">
+                            <option>Мъж</option>
+                            <option>Жена</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="th-lables">Рожденна дата</label>
+                        <label for="password" class="th-lables-date">Дата</label>
+                        <select class="form-control th-input-credentials-date" id="nameOrEmail">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        <label for="password" class="th-lables-date">Месец</label>
+                        <select class="form-control th-input-credentials-date" id="nameOrEmail">
+                            <option value="Януари">Януари</option>
+                            <option value="Февруари">Февруари</option>
+                            <option value="Март">Март</option>
+                            <option value="Април">Април</option>
+                            <option value="Май">Май</option>
+                            <option value="Юни">Юни</option>
+                            <option value="Юли">Юли</option>
+                            <option value="Август">Август</option>
+                            <option value="Септември">Септември</option>
+                            <option value="Октомври">Октомври</option>
+                            <option value="Ноември">Ноември</option>
+                            <option value="Декември">Декември</option>
+                        </select>
+                        <label for="password" class="th-lables-date">Година</label>
+                        <select class="form-control th-input-credentials-date" id="nameOrEmail">
+                            <option value="2002">1994</option>
+                            <option value="2003">1995</option>
+                            <option value="2004">1996</option>
+                            <option value="2005">1997</option>
+                            <option value="2002">1998</option>
+                            <option value="2003">1999</option>
+                            <option value="2004">2000</option>
+                            <option value="2005">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                        </select>
+                        
+                    </div>
+                    <label id="rules">
+                        <input type="checkbox" name="rules" value="Rules">Съгласен съм с 
+                        <a href="">Правила за използване</a>
+                    </label>
+                    <button type="button" class="btn btn-sm btn-default th-button">Регистрирай ме</button>
                 </div>
             </div>
         </div>
-        <script src="jquery-2.1.4.min.js"></script>
-        <script src="register.js"></script>
-        <script src="core.js"></script>
-    </body>
-</html>
+</div>
