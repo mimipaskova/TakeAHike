@@ -1,6 +1,6 @@
 #map-canvas {
-  width: 500px;
-  height: 400px;
+  width: 380px;
+  height: 250px;
   background-color: #CCC;
   display: inline-block;
 }
@@ -110,8 +110,15 @@ img.avatar {
   margin: auto;
 }
 
+.th-key-value-search {
+  margin-left: 15%;
+}
+
 /* make sidebar nav vertical */
 @media (min-width: 768px) {
+  .sidebar-nav {
+    float: left;
+  }
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;
     max-height: none;

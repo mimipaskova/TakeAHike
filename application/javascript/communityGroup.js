@@ -175,7 +175,11 @@ communityGroup.createFlexigrid = function() {
 var initializeCommunityGroup = function () {
     communityGroup();
     communityGroup.initialize();
- 
+    initializeGoogleMaps();
+    
+    
+}
+var initializeGoogleMaps=function(){
     function initialize() {
     var mapCanvas = document.getElementById('map-canvas');
     var mapOptions = {
@@ -185,5 +189,5 @@ var initializeCommunityGroup = function () {
     }
     var map = new google.maps.Map(mapCanvas, mapOptions)
     }
-    google.maps.event.addDomListener(window, 'load', initialize);
+    initialize();
 }

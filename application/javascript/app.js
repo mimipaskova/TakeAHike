@@ -50,13 +50,13 @@ var gotoEditProfile = function () {
 }
 
 var gotoSearch = function () {
-	loadInContainer("root-container", "search.html");
+	loadInContainer("root-container", "search.html",initializeGoogleMaps);
 	activeHeaderTab("searchTab");
+	
 }
 
 var gotoCommunityGroup = function () {
-	loadInContainer("root-container", "CommunityGroup.html");
-	initializeCommunityGroup();
+	loadInContainer("root-container", "CommunityGroup.html",initializeCommunityGroup);
 	activeHeaderTab("communityTab");
 }
 
