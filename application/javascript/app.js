@@ -54,6 +54,10 @@ var gotoSearch = function () {
 	activeHeaderTab("searchTab");
 	
 }
+var gotoSearchResults=function(){
+	loadInContainer("root-container", "search-results.html",initializeGoogleMaps);
+	activeHeaderTab("searchTab");
+}
 
 var gotoCommunityGroup = function () {
 	loadInContainer("root-container", "CommunityGroup.html",initializeCommunityGroup);
