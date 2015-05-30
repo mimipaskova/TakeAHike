@@ -194,7 +194,7 @@ module.exports = function (grunt) {
         options: {
         },
         src: 'application/style/**/*.less',
-        dest: 'application/dist/style.css'
+        dest: 'application/libs/style.css'
       }
     },
 

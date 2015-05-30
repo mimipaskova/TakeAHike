@@ -1,0 +1,155 @@
+#map-canvas {
+  width: 500px;
+  height: 400px;
+  background-color: #CCC;
+  display: inline-block;
+}
+.th-centered {
+  float: none;
+  margin: 30px;
+}
+.th-vertical-center {
+  margin-bottom: 50%;
+}
+#flexiDestinationList {
+  margin: 0 auto;
+}
+#destFormBox {
+  margin: 0 auto;
+}
+#search-dest {
+  width: 500px;
+  display: inline-block;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+img.avatar,
+div.avatar {
+  border: 1px solid #eee;
+  width: 122px;
+  height: 122px;
+}
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+.my-histories {
+  display: block;
+}
+
+.story-container {
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid;
+  border-color: transparent;
+}
+.story-container:hover {
+  border-color: lightblue;
+}
+.story-container .story-thumbnail {
+  width: 200px;
+  height: 150px;
+}
+.story-container .story-information {
+  display: inline-block;
+  vertical-align: top;
+}
+.story-container .story-information .story-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+img.avatar {
+  border: 1px solid #eee;
+}
+.only-bottom-margin {
+  margin-top: 0px;
+}
+.activity-mini {
+  padding-right: 15px;
+  float: left;
+}
+
+.bs-example {
+  margin: 20px;
+  width: 60%;
+  margin-left: 30%;
+}
+.tab-pane.fade.in.active {
+  margin-bottom: 50px;
+}
+
+.th-input-credentials-date {
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline-block;
+  width: initial;
+}
+#rules {
+  margin-left: 30%;
+  margin-bottom: 2%;
+}
+.register-panel {
+  width: 62%;
+  margin: auto;
+}
+
+/* make sidebar nav vertical */
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+.th-input-credentials {
+  display: inline-block;
+  width: initial;
+}
+.th-lables {
+  width: 30%;
+}
+.th-login-admin {
+  display: block;
+  margin-top: 20px;
+}
+.th-button {
+  margin-left: 30%;
+  margin-right: 20px;
+}
+.login-panel {
+  width: 50%;
+  margin: auto;
+}
+
+body {
+  display: none;
+}
