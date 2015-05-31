@@ -1,0 +1,89 @@
+<div class="th-communitygroup-sidebar" id="side-navbar-container">
+      <include src="side-navbar.html"></include>
+   </div>
+<div class="container" style="margin-top:30px">
+   
+   
+   <div class="panel panel-default th-community-container">
+      <div class="panel-heading">
+         <h3 class="panel-title"><strong>Предстоящи пътувания</strong></h3>
+      </div>
+      <div class="panel-body text-center pagination-centered" id="body">
+         <fieldset>
+            
+            <form class="navbar-form" role="search">
+               
+               <span class='th-key-value-search'>Търси чрез ключова дума</span> 
+               <div class="input-group">
+                  <input type="text" class="form-control th-cg-search" placeholder="Search" name="srch-term" id="srch-term">
+                  <div class="input-group-btn">
+                     <button class="btn btn-info" id='search-btn' onsubmit='return false;' type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                  </div>
+               </div>
+            
+               <div class='th-centered text-center pagination-centered'>
+                  <span class="th-vertical-center">Търси чрез карта</span>
+                  <div class='th-centered' id="map-canvas"></div>
+               </div>
+            </form>
+            <div id="destFormBox">
+               <h3>Предложения:  </h3>
+               <div id="flexiDestinationList">
+                  <table id="DestinationList" >
+                     <tr>
+                        <td>
+                           <div id='number'>1</div>
+                        </td>
+                        <td>
+                           <div id='name'>Иван Иванов</div>
+                        </td>
+                        <td>
+                           <div id='place'>Ягодинска пещера</div>
+                        </td>
+                        <td>
+                           <div id='description'>Изумително място</div>
+                        </td>
+                        <td>
+                           <div id='date'>12.07.2015</div>
+                        </td>
+                        <td>
+                           <div id='freePlaces'>4</div>
+                        </td>
+                        <td>
+                           <div ><button class="btn btn-danger th-delete" id='search-btn' onsubmit='return false;'  type="submit"><i class="glyphicon glyphicon-remove"></i>Премахни</button>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <div id='number'>2</div>
+                        </td>
+                        <td>
+                           <div id='name'>Йорданка Милчева</div>
+                        </td>
+                        <td>
+                           <div id='place'>Хисаря</div>
+                        </td>
+                        <td>
+                           <div id='description'>Минерални бани</div>
+                        </td>
+                        <td>
+                           <div id='date'>06.06.2015</div>
+                        </td>
+                        <td>
+                           <div id='freePlaces'>5</div>
+                        </td>
+                        <td>
+                           <div >
+                              <button class="btn btn-danger th-delete" id='search-btn' onsubmit='return false;'  type="submit"><i class="glyphicon glyphicon-remove"></i>Премахни</button>
+                           </div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </fieldset>
+      </div>
+   </div>
+</div>
+<div id="create-confirmation"></div>
