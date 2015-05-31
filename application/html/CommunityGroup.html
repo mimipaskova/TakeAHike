@@ -11,7 +11,10 @@
       <div class="panel-body text-center pagination-centered" id="body">
          <fieldset>
             <div class="th-centered">
-               <input class="btn btn-sm btn-default " type="button" id='add-suggestion' value="Добавяне на ново предложение+"/><input class="btn btn-sm btn-default " type="button" id='remove-user' value="Премахни"/>
+               <button class="btn btn-success "  id='add-suggestion' onsubmit='return false;'  type="submit"><i class="glyphicon glyphicon-plus"></i>Добавяне на ново предложение</button>
+
+              <button class="btn btn-danger "  id='remove-user' onsubmit='return false;'  type="submit"><i class="glyphicon glyphicon-remove"></i>Премахни</button>
+               
             </div>
             <form class="navbar-form" role="search">
                
@@ -19,7 +22,7 @@
                <div class="input-group">
                   <input type="text" class="form-control th-cg-search" placeholder="Search" name="srch-term" id="srch-term">
                   <div class="input-group-btn">
-                     <button class="btn btn-default" id='search-btn' onsubmit='return false;' type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                     <button class="btn btn-info" id='search-btn' onsubmit='return false;' type="submit"><i class="glyphicon glyphicon-search"></i></button>
                   </div>
                </div>
             
@@ -52,7 +55,7 @@
                            <div id='freePlaces'>4</div>
                         </td>
                         <td>
-                           <div ><input class="btn btn-sm btn-default th-subscribe" type="button"  value="Запиши ме"/></div>
+                           <div ><button class="btn btn-success th-subscribe" onsubmit='return false;'  type="submit"><i class="glyphicon glyphicon-plus"></i>Запиши ме</button></div>
                         </td>
                      </tr>
                      <tr>
@@ -75,7 +78,7 @@
                            <div id='freePlaces'>5</div>
                         </td>
                         <td>
-                           <div ><input class="btn btn-sm btn-default th-subscribe" type="button"  value="Запиши ме"/></div>
+                           <div ><button class="btn btn-success th-subscribe" onsubmit='return false;'  type="submit"><i class="glyphicon glyphicon-plus"></i>Запиши ме</button></div>
                         </td>
                      </tr>
                   </table>

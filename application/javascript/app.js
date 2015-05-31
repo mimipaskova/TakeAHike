@@ -50,17 +50,30 @@ var gotoEditProfile = function () {
 }
 
 var gotoSearch = function () {
-	loadInContainer("root-container", "search.html",initializeGoogleMaps);
+	if(isAdmin)
+		loadInContainer("root-container", "search-admin.html",initializeGoogleMaps);
+	else
+		loadInContainer("root-container", "search.html",initializeGoogleMaps);
+
 	activeHeaderTab("searchTab");
 	
 }
 var gotoSearchResults=function(){
-	loadInContainer("root-container", "search-results.html",initializeGoogleMaps);
+	if(isAdmin)
+		loadInContainer("root-container", "search-results-admin.html",initializeGoogleMaps);
+	else
+		loadInContainer("root-container", "search-results.html",initializeGoogleMaps);
 	activeHeaderTab("searchTab");
 }
 
 var gotoCommunityGroup = function () {
-	loadInContainer("root-container", "CommunityGroup.html",initializeCommunityGroup);
+	if(!isLoggedIn)
+		return;
+	
+	if(isAdmin)
+		loadInContainer("root-container", "communityGroup-admin.html",initializeCommunityGroup);
+	else
+		loadInContainer("root-container", "CommunityGroup.html",initializeCommunityGroup);
 	activeHeaderTab("communityTab");
 }
 
@@ -90,4 +103,7 @@ var logout = function () {
 	});
 	isLoggedIn = false;
 	isAdmin = false;
+}
+var sendEMail = function () {
+    BootstrapDialog.success("Моля проверете пощата си за инструкции за забравена парола.");;
 }
