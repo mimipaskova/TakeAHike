@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <include src="side-navbar.html"></include>
+        </div>
+        <div class="col-sm-9">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Сподели История</h3>
+                </div>
+                <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="storyTitle" class="control-label col-xs-2">Заглавие</label>
+                                <div class="col-xs-10">
+                                    <input class="form-control" type="text" id="storyTitle"/>
+                                </div>
+                            </div>
+
+                            <div class='th-centered text-center pagination-centered'>
+                                <label for="map-canvas" class="control-label col-xs-2">Посочете на картата</label>
+                                <div class="col-xs-10">
+                                    <div class='th-centered' id="map-canvas"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="datepicker" class="control-label col-xs-2">Посетена на</label>
+                                <div class="col-xs-10">
+                                    <input class="form-control" type="text" id="datepicker"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="editor" class="control-label col-xs-2">Вашето преживяване</label>
+                                <div class="col-xs-10">
+                                    <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+                                        <div class="btn-group">
+                                            <a class="btn" data-edit="bold" title="" data-original-title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
+                                            <a class="btn" data-edit="italic" title="" data-original-title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
+                                            <a class="btn" data-edit="strikethrough" title="" data-original-title="Strikethrough"><i class="icon-strikethrough"></i></a>
+                                            <a class="btn" data-edit="underline" title="" data-original-title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a>
+                                        </div>
+                                    </div>
+                                    <div id="editor" class="lead" placeholder=""></div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-xs-offset-2 col-xs-2 text-left">
+                                    <button type="submit" onclick="openVideoUploadDialog()" class="btn btn-primary">
+                                        <i class="glyphicon glyphicon-facetime-video"></i>
+                                        Добави клип
+                                    </button>
+                                </div>
+
+                                <div class="col-xs-2 text-left">
+                                    <button type="submit" onclick="openImageUploadDialog()" class="btn btn-primary">
+                                        <i class="glyphicon glyphicon-picture"></i>
+                                        Добави снимки
+                                    </button>
+                                </div>
+
+                                <div class="col-xs-offset-2 col-xs-4 text-right">
+                                    <button type="button" class="btn btn-success">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                        Добави
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="video-upload"></div>
