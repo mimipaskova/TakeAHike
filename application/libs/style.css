@@ -97,6 +97,23 @@ div.avatar {
   font-size: 20px;
 }
 
+body {
+  background-image: url("background.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.th-navbar {
+  background-image: none;
+  background-color: #e5eff7;
+}
+.panel-body {
+  background-color: #e5eff7;
+}
+/*To be refactor*/
+.bootstrap-dialog.type-success .modal-header {
+  background-color: #3072ac;
+}
+
 img.avatar {
   border: 1px solid #eee;
 }

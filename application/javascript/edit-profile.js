@@ -27,11 +27,11 @@ var gotoEditedProfile = function () {
 }
 
 var saveProfile = function () {
-    BootstrapDialog.success("Профилат беше редактиран успешно");
+    BootstrapDialog.success("Профилът беше редактиран успешно");
     gotoEditedProfile();
 }
 
 var saveProfileAdmin = function () {
-    BootstrapDialog.success("Профилат беше редактиран успешно");
+    BootstrapDialog.success("Профилът беше редактиран успешно");
     gotoEditedProfile();
 }
