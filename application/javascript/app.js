@@ -59,11 +59,16 @@ var gotoSearch = function () {
 	
 }
 var gotoSearchResults=function(){
-	if(isAdmin)
+	if(isAdmin) {
 		loadInContainer("root-container", "search-results-admin.html",initializeGoogleMaps);
-	else
+	} else {
 		loadInContainer("root-container", "search-results.html",initializeGoogleMaps);
+	}
 	activeHeaderTab("searchTab");
+}
+
+var gotoClassification = function () {
+	loadInContainer("root-container", "rating.html");
 }
 
 var gotoCommunityGroup = function () {
