@@ -86,7 +86,13 @@ var gotoLoginAsAdmin = function () {
 	loadInContainer("root-container", "login-admin.html");
 	activeHeaderTab("homeTab");
 }
+var gotoMyStories=function(){
+	if(!isLoggedIn || isAdmin)
+		return;
 
+	loadInContainer("root-container", "myStories.html");
+
+}
 var gotoProfile = function () {
 	if (isAdmin) {
 		loadInContainer("root-container", "profile-admin.html");
@@ -105,5 +111,5 @@ var logout = function () {
 	isAdmin = false;
 }
 var sendEMail = function () {
-    BootstrapDialog.success("Моля проверете пощата си за инструкции за забравена парола.");;
+    BootstrapDialog.success("Моля проверете пощата си за инструкции за забравена парола.");
 }

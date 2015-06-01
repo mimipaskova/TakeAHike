@@ -1,8 +1,8 @@
 var communityGroup = function() {
-    communityGroup.templateDialog = "<span class='details-container'>Място:<h3 ><input class='form-control ' type='text'/></h3></span><br/>" +
-        "<span class='details-container'>Описание:<h3 ><input class='form-control ' type='text'/></h3></span></div>" +
+    communityGroup.templateDialog = "<span class='details-container'>Място:<h3 ><input class='form-control ' id='place1' type='text'/></h3></span><br/>" +
+        "<span class='details-container'>Описание:<h3 ><input class='form-control ' id='description1' type='text'/></h3></span></div>" +
         "<span class='details-container'>Дата:<h3  ><input class='form-control ' id='datepicker' type='text'/></h3></span><br/>" +
-        "<span class='details-container'>Свободни места:<h3 ><input class='form-control ' type='text'/></h3></span></div>";
+        "<span class='details-container'>Свободни места:<h3 ><input class='form-control ' id='free-places1' type='text'/></h3></span></div>";
 
     communityGroup.templateDialogDeleteUser = "<div><span class='details-container'>Мартин Захариев<button class='btn btn-danger th-remove' onsubmit='return false;'  type='submit'>"+
         "<i class='glyphicon glyphicon-remove'></i>Премахни</button></span></div><br/>" +
@@ -48,7 +48,7 @@ communityGroup.hookEvents=function(){
                 }, {
                     display: 'Място',
                     name: "place",
-                    width: 200,
+                    width: 150,
                     align: 'left'
                 }, {
                     display: 'Описание',
@@ -65,12 +65,12 @@ communityGroup.hookEvents=function(){
                 }, {
                     display: 'Свободни места',
                     name: "freePlaces",
-                    width: 50,
+                    width: 93,
                     align: 'left'
                 }, {
-                    display: 'Запиши ме',
+                    display: 'Избери',
                     name: "subscribe",
-                    width: 120,
+                    width: 123,
                     align: 'left'
                 }
             ],
@@ -169,18 +169,19 @@ communityGroup.hookEvents=function(){
         var divSign = document.createElement("div");
 
         divNumber.innerHTML = 3;
-        divName.innerHTML = "Name";
-        divPlace.innerHTML = "Place";
-        divDescription.innerHTML = "New one";
-        divDate.innerHTML = "12.12.2015"
+        divName.innerHTML = "Yanislav";
+        divPlace.innerHTML = $("#place1").val();
+        divDescription.innerHTML = $("#description1").val();
+        divDate.innerHTML = $("#datepicker").val();
         divFree.innerHTML = 3;
         var input = document.createElement("button");
         input.setAttribute("type", "button");
-        input.setAttribute("value", "Запиши ме");
+        
         input.setAttribute("class", 'btn btn-success th-subscribe');
         var i = document.createElement("i");
         i.setAttribute("class","glyphicon glyphicon-plus");
          input.appendChild(i);
+         $(input).append("Запиши ме");
         divSign.appendChild(input);
 
         tdNumber.appendChild(divNumber);
@@ -198,8 +199,8 @@ communityGroup.hookEvents=function(){
         tr.appendChild(tdDate);
         tr.appendChild(tdFree);
         tr.appendChild(tdSign);
-
-        table.appendChild(tr);
+        var flexContainer=$(table).find("tbody");
+        flexContainer.append(tr);
 
     };
 };
