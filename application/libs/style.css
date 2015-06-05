@@ -139,13 +139,25 @@ img.avatar {
   float: left;
 }
 
-.bs-example {
-  margin: 20px;
-  width: 60%;
-  margin-left: 30%;
+.rate-container {
+  margin-bottom: 35px;
+  padding: 10px;
 }
-.tab-pane.fade.in.active {
-  margin-bottom: 50px;
+.rate-container .story-thumbnail {
+  width: 250px;
+  height: 150px;
+}
+.bs-example {
+  /*margin: 20px;
+    width: 60%;
+    margin-left: 30%;*/
+}
+.like-buttons-group {
+  margin-top: 40px;
+}
+.tab-pane {
+  /*background-color: #e5eff7;*/
+  height: 450px;
 }
 
 .th-input-credentials-date {
@@ -209,4 +221,97 @@ img.avatar {
 
 body {
   display: none;
+}
+.scale-1_5 {
+  transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  /* IE 9 */
+  -moz-transform: scale(1.5, 1.5);
+  /* Firefox */
+  -webkit-transform: scale(1.5, 1.5);
+  /* Safari and Chrome */
+  -o-transform: scale(1.5, 1.5);
+  /* Opera */
+}
+.scale-2 {
+  transform: scale(2, 2);
+  -ms-transform: scale(2, 2);
+  /* IE 9 */
+  -moz-transform: scale(2, 2);
+  /* Firefox */
+  -webkit-transform: scale(2, 2);
+  /* Safari and Chrome */
+  -o-transform: scale(2, 2);
+  /* Opera */
+}
+.scale-3 {
+  transform: scale(3, 3);
+  -ms-transform: scale(3, 3);
+  /* IE 9 */
+  -moz-transform: scale(3, 3);
+  /* Firefox */
+  -webkit-transform: scale(3, 3);
+  /* Safari and Chrome */
+  -o-transform: scale(3, 3);
+  /* Opera */
+}
+.pie {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  clip: rect(0px, 50px, 100px, 0px);
+}
+.hold {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+#pieSlice1 .pie {
+  background-color: #1b458b;
+  -webkit-transform: rotate(50deg);
+  -moz-transform: rotate(50deg);
+  -o-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+#pieSliceBlue .pie {
+  background-color: #1b458b;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#pieSliceBlue2 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#pieSliceBlue2 .pie {
+  background-color: #1b458b;
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+#pieSliceRed {
+  -webkit-transform: rotate(220deg);
+  -moz-transform: rotate(220deg);
+  -o-transform: rotate(220deg);
+  transform: rotate(220deg);
+}
+#pieSliceRed .pie {
+  background-color: #cc0000;
+  -webkit-transform: rotate(140deg);
+  -moz-transform: rotate(140deg);
+  -o-transform: rotate(140deg);
+  transform: rotate(140deg);
 }
