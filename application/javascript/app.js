@@ -107,11 +107,28 @@ var gotoProfile = function () {
 	activeHeaderTab("profileTab");
 }
 var storyDetails=function(){
-	loadInContainer("root-container", "story-details.html",function(){
+
+	storyDetails.initializeStory=function(){
 		initializeAlbumSlider();
 		initializeGoogleMaps();
 		initializeStoryDetails();
+	};
+
+	if(!isLoggedIn)
+	loadInContainer("root-container", "story-details-guest.html",function(){
+		storyDetails.initializeStory();
 	});
+	if(!isAdmin)
+	loadInContainer("root-container", "story-details.html",function(){
+		storyDetails.initializeStory();
+		
+	});
+	else
+	loadInContainer("root-container", "story-details-admin.html",function(){
+		storyDetails.initializeStory();
+		
+	});
+
 	loadInContainer("header-container", "header-nav-register.html");
 
 }

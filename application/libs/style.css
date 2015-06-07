@@ -264,6 +264,10 @@ hr.delimiter {
   font-size: 10px;
   color: grey;
 }
+.form-control-guest {
+  color: red;
+  display: block;
+}
 
 body {
   display: none;
