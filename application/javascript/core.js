@@ -1,3 +1,5 @@
+var selectedTabId = "";
+
 var findAllDOMElements = function (start, nodeName) {
     var result = [];
 
@@ -105,13 +107,13 @@ var loadInContainer = function (containerId, view, callback) {
         parser.parseDOM(document.getElementById(containerId));
         parser.loadIncludes();
 
+        reactiveSidebarNavigation();
+
         if (callback) {
             callback();
         }
     });
 }
-
-var selectedTabId = "";
 
 var activeHeaderTab = function (tabId) {
     if (selectedTabId != "") {
@@ -119,6 +121,18 @@ var activeHeaderTab = function (tabId) {
     }
     $("#" + tabId).addClass("active");
     selectedTabId = tabId;
+}
+
+var reactiveSidebarNavigation = function () {
+    if (!isLoggedIn) {
+        if ($("#sideNavbar").length > 0) {
+            $("#shareStoryButton").css("background-color", "#c6c3b6");
+            $("#interactiveMapButton").css("background-color", "#c6c3b6");
+            $("#myStoriesButton").css("background-color", "#c6c3b6");
+        } else {
+            setTimeout(reactiveSidebarNavigation, 100);
+        }
+    }
 }
 
 $(document).ready(function () {
