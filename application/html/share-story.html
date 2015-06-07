@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-2">
             <include src="side-navbar.html"></include>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-10">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">Сподели История</h3>
@@ -20,7 +20,7 @@
                             <div class='th-centered text-center pagination-centered'>
                                 <label for="map-canvas" class="control-label col-xs-2">Посочете на картата</label>
                                 <div class="col-xs-10">
-                                    <div class='th-centered' id="map-canvas"></div>
+                                    <div class='th-centered interactive-map' id="map-canvas"></div>
                                 </div>
                             </div>
 
@@ -49,14 +49,14 @@
 
                             <div class="form-group">
                                 <div class="col-xs-offset-2 col-xs-2 text-left">
-                                    <button type="submit" onclick="openVideoUploadDialog()" class="btn btn-primary">
+                                    <button onclick="openVideoUploadDialog()" class="btn btn-primary">
                                         <i class="glyphicon glyphicon-facetime-video"></i>
                                         Добави клип
                                     </button>
                                 </div>
 
                                 <div class="col-xs-2 text-left">
-                                    <button type="submit" onclick="openImageUploadDialog()" class="btn btn-primary">
+                                    <button onclick="openImageUploadDialog()" class="btn btn-primary">
                                         <i class="glyphicon glyphicon-picture"></i>
                                         Добави снимки
                                     </button>
@@ -77,4 +77,4 @@
         </div>
     </div>
 </div>
-<div id="video-upload"></div>
+<div id="upload-window"></div>

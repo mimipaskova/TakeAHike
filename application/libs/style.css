@@ -1,8 +1,8 @@
-#map-canvas {
-  width: 420px;
-  height: 270px;
-  background-color: #CCC;
-  display: inline-block;
+.community-map {
+  width: 420px !important;
+  height: 270px !important;
+  background-color: #CCC !important;
+  display: inline-block !important;
 }
 .th-centered {
   margin: 40px;
@@ -469,5 +469,33 @@ body {
 @media (min-width: 1000px) {
   .chart .percent {
     font-size: 30px;
+  }
+}
+.interactive-map {
+  width: 200px;
+  height: 300px;
+}
+@media (min-width: 500px) {
+  .interactive-map {
+    width: 400px;
+    height: 300px;
+  }
+}
+@media (min-width: 700px) {
+  .interactive-map {
+    width: 550px;
+    height: 300px;
+  }
+}
+@media (min-width: 1000px) {
+  .interactive-map {
+    width: 600px;
+    height: 500px;
+  }
+}
+@media (min-width: 1280px) {
+  .interactive-map {
+    width: 800px;
+    height: 500px;
   }
 }
