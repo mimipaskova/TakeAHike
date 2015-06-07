@@ -118,7 +118,7 @@ var storyDetails=function(){
 	loadInContainer("root-container", "story-details-guest.html",function(){
 		storyDetails.initializeStory();
 	});
-	if(!isAdmin)
+	else if(!isAdmin)
 	loadInContainer("root-container", "story-details.html",function(){
 		storyDetails.initializeStory();
 		
@@ -132,6 +132,9 @@ var storyDetails=function(){
 	loadInContainer("header-container", "header-nav-register.html");
 
 }
+var deleteStory=function(){
+        loadInContainer("root-container", "story-details-deleted.html");
+    };
 var logout = function () {
 	loadInContainer("root-container", "login-view.html");
 	loadInContainer("header-container", "header-nav-register.html", function () {

@@ -5,7 +5,16 @@ var initializeStoryDetails = function() {
     $("#send-comment").click(function() {
         initializeStoryDetails.commment();
     });
+    $(".th-delete-opinion").click(function(){
+        var comment=$(this).parent();
+        comment.hide();
 
+    });
+    $("#delete-video").click(function() {
+        var video=$(this).parent().parent();
+        video.css("visibility",'hidden');
+    });
+    
     initializeStoryDetails.commment = function() {
         var comment = $("#th-comment").val();
         var currentdate = new Date();

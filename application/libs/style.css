@@ -268,6 +268,19 @@ hr.delimiter {
   color: red;
   display: block;
 }
+.th-delete-story {
+  display: inline;
+  float: right;
+}
+.th-delete-video {
+  position: absolute;
+  float: right;
+}
+.th-delete-opinion {
+  display: inline !important;
+  margin-left: 450px !important;
+  margin-top: 50% !important;
+}
 
 body {
   display: none;
