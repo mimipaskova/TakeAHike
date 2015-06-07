@@ -1,7 +1,7 @@
 var shareStory = {};
 
 shareStory.uploadVideoTemplate = "<span class='details-container'><h3>Избери:</h3><div class='form-group'><input class='form-control ' type='file'/></span></div>";
-shareStory.uploadImageTemplate = "<span class='details-container'><h3>Избери:</h3><div class='form-group'><input class='form-control ' type='file'/><h3>Описание:</h3><div class='form-group'><input class='form-control ' type='file'/></span></div>";
+shareStory.uploadImageTemplate = "<span class='details-container'><h3>Избери:</h3><div class='form-group'><input class='form-control ' type='file'/><h3>Описание:</h3><div class='form-group'><input class='form-control ' type='text'/></span></div>";
 
 var initializeShareStory = function () {
 	$("#datepicker").datepicker();
