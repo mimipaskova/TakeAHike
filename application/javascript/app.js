@@ -126,11 +126,7 @@ var logout = function () {
 var sendEMail = function () {
     BootstrapDialog.success("Моля проверете пощата си за инструкции за забравена парола.");
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 94c3d7b9084d35d053fef32f45ce0a22ba41a269
 var circles = [{
 	center: new google.maps.LatLng(41.625703, 25.368907),
 	radius: 6000
