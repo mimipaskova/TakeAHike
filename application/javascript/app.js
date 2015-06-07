@@ -106,7 +106,15 @@ var gotoProfile = function () {
 	}
 	activeHeaderTab("profileTab");
 }
+var storyDetails=function(){
+	loadInContainer("root-container", "story-details.html",function(){
+		initializeAlbumSlider();
+		initializeGoogleMaps();
+		initializeStoryDetails();
+	});
+	loadInContainer("header-container", "header-nav-register.html");
 
+}
 var logout = function () {
 	loadInContainer("root-container", "login-view.html");
 	loadInContainer("header-container", "header-nav-register.html", function () {
@@ -117,4 +125,47 @@ var logout = function () {
 }
 var sendEMail = function () {
     BootstrapDialog.success("Моля проверете пощата си за инструкции за забравена парола.");
+}
+var circles = [{
+	center: new google.maps.LatLng(41.625703, 25.368907),
+	radius: 6000
+}, {
+	center: new google.maps.LatLng(41.647205, 25.309823),
+	radius: 6000
+}, {
+	center: new google.maps.LatLng(41.757337, 23.387427),
+	radius: 6000
+}, {
+	center: new google.maps.LatLng(42.132204, 23.342108),
+	radius: 6000
+}, {
+	center: new google.maps.LatLng(43.178626, 23.462441),
+	radius: 6000
+}, {
+	center: new google.maps.LatLng(43.203623, 23.492764),
+	radius: 6000
+}, {
+	center: new google.maps.LatLng(43.250144, 25.000599),
+	radius: 6000
+}, {
+	center: new google.maps.LatLng(43.218841, 27.876320),
+	radius: 6000
+}];
+
+
+
+var addInteractiveMapShapes = function (map) {
+	circles.forEach(function (circle) {
+		var options = {
+			strokeColor: '#FF0000',
+			strokeOpacity: 0.8,
+			strokeWeight: 2,
+			fillColor: '#FF0000',
+			fillOpacity: 0.35,
+			map: map,
+			center: circle.center,
+      		radius: circle.radius
+		};
+    	placeCircle = new google.maps.Circle(options);
+	});
 }
