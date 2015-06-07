@@ -48,6 +48,9 @@
   width: 80%;
   margin-left: 20%;
 }
+#create-confirmation .th-remove {
+  float: right;
+}
 
 /* CSS used here will be applied after bootstrap.css */
 img.avatar,
@@ -126,6 +129,9 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   float: right;
+}
+.story-container {
+  border: 1px solid black;
 }
 
 img.avatar {
@@ -280,6 +286,9 @@ hr.delimiter {
   display: inline !important;
   margin-left: 450px !important;
   margin-top: 50% !important;
+}
+.th-edit-user-story {
+  float: right;
 }
 
 body {

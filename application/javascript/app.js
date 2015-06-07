@@ -108,30 +108,37 @@ var gotoProfile = function () {
 }
 var storyDetails=function(){
 
-	storyDetails.initializeStory=function(){
-		initializeAlbumSlider();
-		initializeGoogleMaps();
-		initializeStoryDetails();
-	};
+
 
 	if(!isLoggedIn)
 	loadInContainer("root-container", "story-details-guest.html",function(){
-		storyDetails.initializeStory();
+		initializeStory();
 	});
 	else if(!isAdmin)
 	loadInContainer("root-container", "story-details.html",function(){
-		storyDetails.initializeStory();
+		initializeStory();
 		
 	});
 	else
 	loadInContainer("root-container", "story-details-admin.html",function(){
-		storyDetails.initializeStory();
+		initializeStory();
 		
 	});
 
 	loadInContainer("header-container", "header-nav-register.html");
 
 }
+var userEditStory=function(){
+	loadInContainer("root-container", "story-details-admin.html",function(){
+		initializeStory();
+		
+	});
+}
+	var initializeStory=function(){
+		initializeAlbumSlider();
+		initializeGoogleMaps();
+		initializeStoryDetails();
+	};
 var deleteStory=function(){
         loadInContainer("root-container", "story-details-deleted.html");
     };

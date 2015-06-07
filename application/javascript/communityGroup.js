@@ -4,7 +4,7 @@ var communityGroup = function() {
         "<span class='details-container'>Дата:<h3  ><input class='form-control ' id='datepicker' type='text'/></h3></span><br/>" +
         "<span class='details-container'>Свободни места:<h3 ><input class='form-control ' id='free-places1' type='text'/></h3></span></div>";
 
-    communityGroup.templateDialogDeleteUser = "<div><span class='details-container'>Мартин Захариев<button class='btn btn-danger th-remove' onsubmit='return false;'  type='submit'>"+
+    communityGroup.templateDialogDeleteUser = "<div><h3>Премахнете нежеланите, записали се:</h3></div><div><span class='details-container'>Мартин Захариев<button class='btn btn-danger th-remove' onsubmit='return false;'  type='submit'>"+
         "<i class='glyphicon glyphicon-remove'></i>Премахни</button></span></div><br/>" +
         "<div><span class='details-container'>Иван Иванов<button class='btn btn-danger th-remove' onsubmit='return false;'  type='submit'>"+
         "<i class='glyphicon glyphicon-remove'></i>Премахни</button></span></div><br/>";
@@ -26,8 +26,8 @@ communityGroup.hookEvents=function(){
             communityGroup.showDialogDetails();
 
         });
-        $('#remove-user').click(function() {
-            communityGroup.removeUserDialog();
+        $('.remove-user').click(function() {
+            communityGroup.removeUserDialog(this);
 
         });
 };
@@ -103,17 +103,13 @@ communityGroup.hookEvents=function(){
                 click: function() {
                     communityGroup.publish();
                     $(this).dialog("close");
-                }
-            }, {
-                text: 'Cancel',
-                click: function() {
-                    $(this).dialog("close");
-                }
+                },
+                class:'btn btn-success'
             }]
         });
         $("#datepicker").datepicker();
     };
-    communityGroup.removeUserDialog = function() {
+    communityGroup.removeUserDialog = function(that) {
 
         var html = communityGroup.templateDialogDeleteUser;
 
@@ -124,15 +120,14 @@ communityGroup.hookEvents=function(){
             height: 570,
             width: 470,
             modal: true,
-            buttons: [
-
-                {
-                    text: 'Cancel',
-                    click: function() {
-                        $(this).dialog("close");
-                    }
-                }
-            ]
+            buttons: [{
+                text: 'Изтрий публикацията',
+                click: function() {
+                    communityGroup.deletePost(that);
+                    $(this).dialog("close");
+                },
+                class:'btn btn-danger'
+            }]
         });
         $(".th-remove").click(function() {
             $(this).parent().hide();
@@ -168,7 +163,7 @@ communityGroup.hookEvents=function(){
         var tdSign = document.createElement("td");
         var divSign = document.createElement("div");
 
-        divNumber.innerHTML = 3;
+        divNumber.innerHTML = 4;
         divName.innerHTML = "Yanislav";
         divPlace.innerHTML = $("#place1").val();
         divDescription.innerHTML = $("#description1").val();
@@ -177,11 +172,11 @@ communityGroup.hookEvents=function(){
         var input = document.createElement("button");
         input.setAttribute("type", "button");
         
-        input.setAttribute("class", 'btn btn-success th-subscribe');
+        input.setAttribute("class", 'btn btn-danger remove-user');
         var i = document.createElement("i");
-        i.setAttribute("class","glyphicon glyphicon-plus");
+        i.setAttribute("class","glyphicon glyphicon-th");
          input.appendChild(i);
-         $(input).append("Запиши ме");
+         $(input).append("Премахни");
         divSign.appendChild(input);
 
         tdNumber.appendChild(divNumber);
