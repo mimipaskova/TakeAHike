@@ -1,7 +1,7 @@
 var shareStory = {};
 
 shareStory.uploadVideoTemplate = "<span class='details-container'><h3>Избери:</h3><div class='form-group'><input class='form-control ' type='file'/></span></div>";
-shareStory.uploadImageTemplate = "<span class='details-container'><h3>Избери:</h3><div class='form-group'><input class='form-control ' type='file'/></span></div>";
+shareStory.uploadImageTemplate = "<span class='details-container'><h3>Избери:</h3><div class='form-group'><input class='form-control ' type='file'/><h3>Описание:</h3><div class='form-group'><input class='form-control ' type='file'/></span></div>";
 
 var initializeShareStory = function () {
 	$("#datepicker").datepicker();
@@ -17,16 +17,15 @@ var initializeShareStory = function () {
 }
 
 var openImageUploadDialog = function () {
-	$("#video-upload")[0].innerHTML = shareStory.uploadImageTemplate;
-    $("#video-upload").dialog({
+	$("#upload-window")[0].innerHTML = shareStory.uploadImageTemplate;
+    $("#upload-window").dialog({
         title: "Добавяне на Снимки",
-        height: 270,
+        height: 400,
         width: 470,
         modal: true,
         buttons: [{
             text: 'Довави',
             click: function() {
-                // communityGroup.publish();
                 $(this).dialog("close");
             }
         }, {
@@ -40,8 +39,8 @@ var openImageUploadDialog = function () {
 
 var openVideoUploadDialog = function () {
 
-	$("#video-upload")[0].innerHTML = shareStory.uploadVideoTemplate;
-    $("#video-upload").dialog({
+	$("#upload-window")[0].innerHTML = shareStory.uploadVideoTemplate;
+    $("#upload-window").dialog({
         title: "Добавяне на Видео",
         height: 270,
         width: 470,
@@ -49,7 +48,6 @@ var openVideoUploadDialog = function () {
         buttons: [{
             text: 'Довави',
             click: function() {
-                // communityGroup.publish();
                 $(this).dialog("close");
             }
         }, {
