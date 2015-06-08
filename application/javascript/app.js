@@ -107,25 +107,23 @@ var gotoProfile = function () {
 	activeHeaderTab("profileTab");
 }
 var storyDetails=function(){
-
-
-
-	if(!isLoggedIn)
-	loadInContainer("root-container", "story-details-guest.html",function(){
-		initializeStory();
-	});
-	else if(!isAdmin)
-	loadInContainer("root-container", "story-details.html",function(){
-		initializeStory();
-		
-	});
-	else
-	loadInContainer("root-container", "story-details-admin.html",function(){
-		initializeStory();
-		
-	});
-
-	loadInContainer("header-container", "header-nav-register.html");
+	if(!isLoggedIn) {
+		loadInContainer("root-container", "story-details-guest.html",function(){
+			initializeStory();
+		});
+		loadInContainer("header-container", "header-nav-register.html");
+	} else if(!isAdmin) {
+		loadInContainer("root-container", "story-details.html",function(){
+			initializeStory();
+		});
+		loadInContainer("header-container", "header-nav.html");
+	} else {
+		loadInContainer("root-container", "story-details-admin.html",function(){
+			initializeStory();
+		});
+		loadInContainer("header-container", "header-nav.html");
+	}
+	
 
 }
 var userEditStory=function(){
