@@ -98,6 +98,7 @@ var gotoMyStories=function(){
 	loadInContainer("root-container", "myStories.html");
 
 }
+
 var gotoProfile = function () {
 	if (isAdmin) {
 		loadInContainer("root-container", "profile-admin.html");
@@ -106,7 +107,12 @@ var gotoProfile = function () {
 	}
 	activeHeaderTab("profileTab");
 }
-var storyDetails=function(){
+
+var gotoOtherProfile = function () {
+	loadInContainer("root-container", "view-profile.html");
+}
+
+var storyDetails=function() {
 	if(!isLoggedIn) {
 		loadInContainer("root-container", "story-details-guest.html",function(){
 			initializeStory();
@@ -123,23 +129,25 @@ var storyDetails=function(){
 		});
 		loadInContainer("header-container", "header-nav.html");
 	}
-	
-
 }
+
 var userEditStory=function(){
 	loadInContainer("root-container", "story-details-admin.html",function(){
-		initializeStory();
-		
+		initializeStory();		
 	});
 }
-	var initializeStory=function(){
-		initializeAlbumSlider();
-		initializeGoogleMaps();
-		initializeStoryDetails();
-	};
-var deleteStory=function(){
+
+var initializeStory = function() {
+	initializeAlbumSlider();
+	initializeGoogleMaps();
+	initializeStoryDetails();
+};
+
+var deleteStory = function() {
         loadInContainer("root-container", "story-details-deleted.html");
-    };
+
+};
+
 var logout = function () {
 	loadInContainer("root-container", "login-view.html");
 	loadInContainer("header-container", "header-nav-register.html", function () {
@@ -148,6 +156,7 @@ var logout = function () {
 	isLoggedIn = false;
 	isAdmin = false;
 }
+
 var sendEMail = function () {
     BootstrapDialog.success("Моля проверете пощата си за инструкции за забравена парола.");
 }
@@ -177,7 +186,6 @@ var circles = [{
 	center: new google.maps.LatLng(43.218841, 27.876320),
 	radius: 6000
 }];
-
 
 
 var addInteractiveMapShapes = function (map) {
