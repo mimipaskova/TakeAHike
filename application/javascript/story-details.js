@@ -1,3 +1,9 @@
+var gotoEditStory = function () {
+    loadInContainer("root-container", "edit-story.html", function () {
+        initializeShareStory();
+    });
+}
+
 var initializeStoryDetails = function() {
     initializeStoryDetails.templateComment = "<div class='th-opinion'><div class='th-author'>{0}</div>" +
         "<div class='th-comment-text'><p>{1}</p></div><div class='th-date'>{2}</div></div>"
