@@ -9,7 +9,7 @@
                     <h3 class="panel-title">Сподели История</h3>
                 </div>
                 <div class="panel-body">
-                        <form class="form-horizontal">
+                        <form onsubmit="return false;" class="form-horizontal">
                             <div class="form-group">
                                 <label for="storyTitle" class="control-label col-xs-2">Заглавие</label>
                                 <div class="col-xs-10">
@@ -37,10 +37,10 @@
                                 <div class="col-xs-10">
                                     <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
                                         <div class="btn-group">
-                                            <a class="btn" data-edit="bold" title="" data-original-title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
-                                            <a class="btn" data-edit="italic" title="" data-original-title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
-                                            <a class="btn" data-edit="strikethrough" title="" data-original-title="Strikethrough"><i class="icon-strikethrough"></i></a>
-                                            <a class="btn" data-edit="underline" title="" data-original-title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a>
+                                            <a class="btn" data-edit="bold" title="" data-original-title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+                                            <a class="btn" data-edit="italic" title="" data-original-title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+                                            <a class="btn" data-edit="strikethrough" title="" data-original-title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
+                                            <a class="btn" data-edit="underline" title="" data-original-title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
                                         </div>
                                     </div>
                                     <div id="editor" class="lead" placeholder=""></div>
@@ -49,21 +49,21 @@
 
                             <div class="form-group">
                                 <div class="col-xs-offset-2 col-xs-2 text-left">
-                                    <button onclick="openVideoUploadDialog()" class="btn btn-primary">
+                                    <button onsubmit='return false;' onclick="openVideoUploadDialog()" class="btn btn-primary">
                                         <i class="glyphicon glyphicon-facetime-video"></i>
                                         Добави клип
                                     </button>
                                 </div>
 
                                 <div class="col-xs-2 text-left">
-                                    <button onclick="openImageUploadDialog()" class="btn btn-primary">
+                                    <button onsubmit='return false;' onclick="openImageUploadDialog()" class="btn btn-primary">
                                         <i class="glyphicon glyphicon-picture"></i>
                                         Добави снимки
                                     </button>
                                 </div>
 
                                 <div class="col-xs-offset-2 col-xs-4 text-right">
-                                    <button type="button" class="btn btn-success">
+                                    <button type="button" onclick="publishNewStory()" class="btn btn-success">
                                         <i class="glyphicon glyphicon-user"></i>
                                         Добави
                                     </button>

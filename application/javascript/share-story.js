@@ -16,7 +16,7 @@ var initializeShareStory = function () {
     var map = new google.maps.Map(mapCanvas, mapOptions)
 }
 
-var openImageUploadDialog = function () {
+var openImageUploadDialog = function (event) {
 	$("#upload-window")[0].innerHTML = shareStory.uploadImageTemplate;
     $("#upload-window").dialog({
         title: "Добавяне на Снимки",
@@ -34,10 +34,19 @@ var openImageUploadDialog = function () {
                 $(this).dialog("close");
             }
         }]
-    });	
+    });
+
+    console.log(event);
+    return false;
 }
 
-var openVideoUploadDialog = function () {
+var publishNewStory = function () {
+    BootstrapDialog.success("Вие успешно публикувахте нова история!");
+
+    gotoHome();
+}
+
+var openVideoUploadDialog = function (event) {
 
 	$("#upload-window")[0].innerHTML = shareStory.uploadVideoTemplate;
     $("#upload-window").dialog({
@@ -57,4 +66,7 @@ var openVideoUploadDialog = function () {
             }
         }]
     });
+
+    console.log(event);
+    return false;
 }
