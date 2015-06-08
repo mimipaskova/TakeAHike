@@ -130,9 +130,9 @@ body {
   overflow-x: hidden;
   float: right;
 }
-.story-container {
-  border: 1px solid black;
-}
+/*.story-container{
+	border: 1px solid black;
+}*/
 
 img.avatar {
   border: 1px solid #eee;
@@ -146,8 +146,14 @@ img.avatar {
 }
 
 .rate-container {
+  cursor: pointer;
   margin-bottom: 35px;
   padding: 10px;
+  border: 1px solid;
+  border-color: transparent;
+}
+.rate-container:hover {
+  border-color: lightblue;
 }
 .rate-container .story-thumbnail {
   width: 250px;
@@ -529,4 +535,9 @@ body {
     width: 800px;
     height: 500px;
   }
+}
+.logo {
+  width: 180px;
+  height: 45px;
+  margin-top: -13px;
 }
