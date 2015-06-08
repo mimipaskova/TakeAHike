@@ -13,6 +13,7 @@ var initializeStoryDetails = function() {
 
     $("#send-comment").click(function() {
         initializeStoryDetails.commment();
+        BootstrapDialog.success("Успешно публикувахте своя коментар.");
     });
     $(".th-delete-opinion").click(function(){
         var comment=$(this).parent();
