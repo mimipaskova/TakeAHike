@@ -164,7 +164,7 @@ communityGroup.hookEvents=function(){
         var divSign = document.createElement("div");
 
         divNumber.innerHTML = 4;
-        divName.innerHTML = "Yanislav";
+        divName.innerHTML = '<a href="#" onclick="gotoOtherProfile()">Yanislav</a>';
         divPlace.innerHTML = $("#place1").val();
         divDescription.innerHTML = $("#description1").val();
         divDate.innerHTML = $("#datepicker").val();

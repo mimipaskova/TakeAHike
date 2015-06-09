@@ -14,7 +14,7 @@
                <button class="btn btn-success "  id='add-suggestion' onsubmit='return false;' ><i class="glyphicon glyphicon-plus"></i>Добавяне на ново предложение</button>
                
             </div>
-            <form class="navbar-form" role="search">
+            <form class="navbar-form" onsubmit="return false;" role="search">
                
                <span class='th-key-value-search'>Търси чрез ключова дума</span> 
                <div class="input-group">
@@ -38,7 +38,7 @@
                            <div id='number'>1</div>
                         </td>
                         <td>
-                           <div id='name'>Иван Иванов</div>
+                           <div id='name'><a href="#" onclick="gotoOtherProfile()">Иван Иванов</a></div>
                         </td>
                         <td>
                            <div id='place'>Ягодинска пещера</div>
@@ -61,7 +61,7 @@
                            <div id='number'>2</div>
                         </td>
                         <td>
-                           <div id='name'>Янислав Щерев</div>
+                           <div id='name'><a href="#" onclick="gotoOtherProfile()">Янислав Щерев</a></div>
                         </td>
                         <td>
                            <div id='place'>Стобски пирамиди</div>
@@ -85,7 +85,7 @@
                            <div id='number'>3</div>
                         </td>
                         <td>
-                           <div id='name'>Йорданка Милчева</div>
+                           <div id='name'><a href="#" onclick="gotoOtherProfile()">Йорданка Милчева</a></div>
                         </td>
                         <td>
                            <div id='place'>Хисаря</div>

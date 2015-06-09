@@ -7,17 +7,17 @@ $(document).ready(function () {
 });
 
 var login = function () {
-	loadInContainer("root-container", "profile.html");
+	loadInContainer("root-container", "home.html");
 	loadInContainer("header-container", "header-nav.html", function () {
-		activeHeaderTab("profileTab");
+		activeHeaderTab("homeTab");
 	});
 	isLoggedIn = true;
 }
 
 var loginAsAdmin = function () {
-	loadInContainer("root-container", "profile-admin.html");
+	loadInContainer("root-container", "home.html");
 	loadInContainer("header-container", "header-nav.html", function () {
-		activeHeaderTab("profileTab");		
+		activeHeaderTab("homeTab");		
 	});
 
 	isLoggedIn = true;
@@ -50,15 +50,16 @@ var gotoEditProfile = function () {
 }
 
 var gotoSearch = function () {
-	if(isAdmin)
+	if(isAdmin) {
 		loadInContainer("root-container", "search-admin.html", initializeGoogleMaps);
-	else
+	} else {
 		loadInContainer("root-container", "search.html", initializeGoogleMaps);
+	}
 
 	activeHeaderTab("searchTab");
 	
 }
-var gotoSearchResults=function(){
+var gotoSearchResults=function() {
 	if(isAdmin) {
 		loadInContainer("root-container", "search-results-admin.html",initializeGoogleMaps);
 	} else {
@@ -72,13 +73,20 @@ var gotoClassification = function () {
 }
 
 var gotoCommunityGroup = function () {
-	if(!isLoggedIn)
+	if(!isLoggedIn) {
+		BootstrapDialog.show({
+			title: "Неоторизиран достъп",
+			message: "Трябва да се регистрирате или да влезете като потребител, за да може да разгледате тази секция!"
+		});
 		return;
+	}
 	
-	if(isAdmin)
+	if(isAdmin) {
 		loadInContainer("root-container", "communityGroup-admin.html",initializeCommunityGroup);
-	else
+	} else {
 		loadInContainer("root-container", "CommunityGroup.html",initializeCommunityGroup);
+	}
+
 	activeHeaderTab("communityTab");
 }
 
@@ -109,6 +117,7 @@ var gotoProfile = function () {
 }
 
 var gotoOtherProfile = function () {
+	activeHeaderTab("");
 	loadInContainer("root-container", "view-profile.html");
 }
 
